@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{3f8b2c47-9d61-4e05-b7a3-1c6e8f042b95}</ProjectGuid>
+    <RootNamespace>TotalEditor</RootNamespace>
+    <TargetName>TotalEditor</TargetName>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v100</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>$(ProjectDir)src;$(ProjectDir)src\core;$(ProjectDir)src\race;$(ProjectDir)src\character;$(ProjectDir)src\uniform;$(ProjectDir)src\portrait;$(ProjectDir)src\ui;$(KENSHILIB_DIR)\Include;$(KENSHILIB_DIR)\Include\ogre;$(BOOST_INCLUDE_PATH);$(IncludePath)</IncludePath>
+    <LibraryPath>$(KENSHILIB_DIR)\Libraries;$(BOOST_INCLUDE_PATH)\stage\lib;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;BOOST_SYSTEM_NO_LIB;BOOST_SYSTEM_NO_DEPRECATED;BOOST_ALL_NO_LIB;BOOST_ERROR_CODE_HEADER_ONLY;BOOST_THREAD_NO_LIB;BOOST_CHRONO_NO_LIB;BOOST_DATE_TIME_NO_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <!-- /EHa: the plugin guards engine memory with __try, which MSVC only
+           allows alongside C++ objects under asynchronous exception handling. -->
+      <ExceptionHandling>Async</ExceptionHandling>
+      <ForcedIncludeFiles>$(KENSHILIB_DIR)\Include\kenshi\util\OgreUnordered.h;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <!-- Engine classes come from KenshiLib; MyGUI widgets live in a separate
+           library, and a missing ComboBox or ScrollBar is a link error there. -->
+      <AdditionalDependencies>KenshiLib.lib;OgreMain_x64.lib;MyGUIEngine_x64.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <PostBuildEvent>
+      <Command>if exist "D:\SteamLibrary\steamapps\common\Kenshi\mods\TotalEditor" copy /Y "$(TargetPath)" "D:\SteamLibrary\steamapps\common\Kenshi\mods\TotalEditor\TotalEditor.dll"</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="src\TotalEditor.cpp" />
+    <ClCompile Include="src\core\config.cpp" />
+    <ClCompile Include="src\core\log.cpp" />
+    <ClCompile Include="src\core\json.cpp" />
+    <ClCompile Include="src\core\messages.cpp" />
+    <ClCompile Include="src\core\hotkey.cpp" />
+    <ClCompile Include="src\core\frame_tick.cpp" />
+    <ClCompile Include="src\race\anatomy.cpp" />
+    <ClCompile Include="src\race\catalog.cpp" />
+    <ClCompile Include="src\race\legacy_data.cpp" />
+    <ClCompile Include="src\race\race_edit.cpp" />
+    <ClCompile Include="src\race\store.cpp" />
+    <ClCompile Include="src\character\appearance.cpp" />
+    <ClCompile Include="src\character\character_identity.cpp" />
+    <ClCompile Include="src\character\personality.cpp" />
+    <ClCompile Include="src\uniform\colour_adjust_rules.cpp" />
+    <ClCompile Include="src\uniform\uniform_colour.cpp" />
+    <ClCompile Include="src\uniform\uniform_dresser.cpp" />
+    <ClCompile Include="src\uniform\uniform_engine.cpp" />
+    <ClCompile Include="src\uniform\uniform_schemes.cpp" />
+    <ClCompile Include="src\uniform\uniform_store.cpp" />
+    <ClCompile Include="src\portrait\portrait_editor.cpp" />
+    <ClCompile Include="src\ui\editor_window.cpp" />
+    <ClCompile Include="src\ui\ui_widgets.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\common.h" />
+    <ClInclude Include="src\core\config.h" />
+    <ClInclude Include="src\core\log.h" />
+    <ClInclude Include="src\core\json.h" />
+    <ClInclude Include="src\core\messages.h" />
+    <ClInclude Include="src\core\hotkey.h" />
+    <ClInclude Include="src\core\frame_tick.h" />
+    <ClInclude Include="src\race\anatomy.h" />
+    <ClInclude Include="src\race\catalog.h" />
+    <ClInclude Include="src\race\legacy_data.h" />
+    <ClInclude Include="src\race\race_edit.h" />
+    <ClInclude Include="src\race\store.h" />
+    <ClInclude Include="src\character\appearance.h" />
+    <ClInclude Include="src\character\character_identity.h" />
+    <ClInclude Include="src\character\personality.h" />
+    <ClInclude Include="src\uniform\colour_adjust_rules.h" />
+    <ClInclude Include="src\uniform\uniform_colour.h" />
+    <ClInclude Include="src\uniform\uniform_dresser.h" />
+    <ClInclude Include="src\uniform\uniform_engine.h" />
+    <ClInclude Include="src\uniform\uniform_schemes.h" />
+    <ClInclude Include="src\uniform\uniform_store.h" />
+    <ClInclude Include="src\portrait\portrait_editor.h" />
+    <ClInclude Include="src\ui\editor_window.h" />
+    <ClInclude Include="src\ui\ui_palette.h" />
+    <ClInclude Include="src\ui\ui_widgets.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

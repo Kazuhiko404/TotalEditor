@@ -1,0 +1,191 @@
+{
+  "window": {
+    "title": "Total Editor",
+    "warning": "RACE BONUSES ARE GLOBAL AND SHARED. Editing them changes EVERY character of that race in the world -- your squad, town guards and bandits alike. Bonuses are MULTIPLIERS (x1.15), not added points. The panel on the right edits one character's own skills (0-200)."
+  },
+  "bonus": {
+    "empty": "(this race has no bonuses)",
+    "remove": "[X]  Remove bonus",
+    "add": "Add / update bonus",
+    "revert": "Revert race"
+  },
+  "stats": {
+    "noSelection": "No character selected. Click one in the world.",
+    "subject": "Editing: {name}",
+    "apply": "Apply to character",
+    "race": "Race: {name}",
+    "unknownRace": "Race: unknown",
+    "jump": "Edit this race"
+  },
+  "status": {
+    "ready": "Ready.",
+    "raceSelected": "Showing bonuses for {name}.",
+    "noRace": "Pick a race first.",
+    "noStat": "Pick a skill first.",
+    "noBonus": "Pick a bonus from the list first.",
+    "noOriginal": "No original values were recorded for this race.",
+    "badNumber": "That is not a number.",
+    "writeFailed": "The engine refused that edit.",
+    "bonusSet": "{name} now multiplies by {value}.",
+    "bonusRemoved": "Removed the {name} bonus.",
+    "reverted": "{name} is back to its original values.",
+    "statSet": "{name} set to {value}.",
+    "noSource": "Pick a race to copy from.",
+    "sameRace": "That is the same race. Pick a different source.",
+    "copied": "Copied {name} bonuses onto {value}.",
+    "filtered": "{count} races listed.",
+    "jumped": "Showing bonuses for {name}.",
+    "unknownRace": "That character's race is not in the list.",
+    "noPart": "Pick a body part from the list first.",
+    "partSet": "{name} set to {value} hp.",
+    "hitSet": "{name} hit weight set to {value}.",
+    "flagOn": "{name}: yes.",
+    "flagOff": "{name}: no.",
+    "slotApplied": " Slot updated on the selected character.",
+    "slotFailed": " The slot on the selected character did not change.",
+    "slotLater": " Characters already in the world keep their slots; new ones get this.",
+    "bloodSet": "Blood range updated.",
+    "bloodOrder": "The maximum cannot be below the minimum.",
+    "bloodApplied": " Applied to the selected character.",
+    "bloodFailed": " The selected character did not change.",
+    "bloodLater": " Characters already alive keep their blood; new ones get this.",
+    "partApplied": " Applied to the selected character.",
+    "partFailed": " The selected character did not change.",
+    "partLater": " Characters already alive keep their old health; new ones get this.",
+    "uniformSaved": "Uniform colours saved.",
+    "uniformCancelled": "Unsaved colour changes discarded.",
+    "uniformVanilla": "Back to the original armour colours."
+  },
+  "heading": {
+    "bonuses": "ONTO THIS RACE  (target)",
+    "stats": "CHARACTER SKILLS",
+    "copy": "COPY FROM THIS RACE  (source)",
+    "edit": "EDIT RACE",
+    "details": "WHAT THE SOURCE CARRIES",
+    "parts": "BODY PART HEALTH  (global)",
+    "currentBonuses": "THE TARGET'S BONUSES NOW",
+    "blood": "BLOOD  (whole body, global)",
+    "skillList": "EVERY SKILL, AND ITS VALUE",
+    "portrait": "PORTRAIT PREVIEW",
+    "uniform": "UNIFORM COLOURS"
+  },
+  "copy": {
+    "button": "Copy source onto target",
+    "traitsOn": "[X]  With blood and traits",
+    "traitsOff": "[  ]  Bonuses only",
+    "traitsLabel": "Also copy blood, speed and traits"
+  },
+  "filter": {
+    "button": "Search",
+    "realOnly": "[X]  Real races only",
+    "allRaces": "[  ]  Every definition",
+    "realOnlyLabel": "Hide test and placeholder races"
+  },
+  "label": {
+    "race": "Target race",
+    "bonusSkill": "Skill to give a bonus",
+    "bonusValue": "Multiplier  (1.0 = unchanged)",
+    "copyFrom": "Source race",
+    "statSkill": "Skill to edit",
+    "statValue": "Value  (0-200)",
+    "partValue": "Health  (1-500)",
+    "hitValue": "Hit weight  (relative)",
+    "bloodMin": "Minimum  (newborn)",
+    "bloodMax": "Maximum  (adult)",
+    "primaryColour": "PRIMARY COLOUR",
+    "secondaryColour": "SECONDARY COLOUR"
+  },
+  "details": {
+    "none": "No race selected.",
+    "unreadable": "This race's data could not be read.",
+    "yes": "yes",
+    "no": "no",
+    "bodyHead": "BODY",
+    "bloodMin": "Blood, minimum",
+    "bloodMax": "Blood, maximum",
+    "healRate": "Heal rate",
+    "bleedRate": "Bleed rate",
+    "hungerRate": "Hunger rate",
+    "vision": "Vision multiplier",
+    "moveHead": "MOVEMENT",
+    "walkSpeed": "Walk speed",
+    "swimSpeed": "Swim speed",
+    "runMin": "Run speed, min skill",
+    "runMax": "Run speed, max skill",
+    "waterAvoid": "Water avoidance",
+    "natureHead": "NATURE",
+    "robot": "Robot",
+    "vampiric": "Vampiric",
+    "gigantic": "Gigantic",
+    "swims": "Swims",
+    "carriable": "Can be carried",
+    "singleGender": "Single gender",
+    "indoors": "Can go indoors",
+    "noHats": "Wears no hats",
+    "noShirts": "Wears no shirts",
+    "noShoes": "Wears no shoes",
+    "combatHead": "COMBAT",
+    "attackSlots": "Extra attack slots",
+    "firstAid": "First-aid skill",
+    "bonusHead": "SKILL BONUSES ({count})",
+    "noBonuses": "  none",
+    "anatomyHead": "BODY PARTS  (hit chance / health)"
+  },
+  "part": {
+    "empty": "(this race has no body parts)",
+    "apply": "Set part health",
+    "applyHit": "Set hit weight"
+  },
+  "tab": {
+    "overview": "Race overview",
+    "bonuses": "Skill bonuses",
+    "parts": "Body parts",
+    "flags": "Equipment and nature",
+    "character": "Character",
+    "uniform": "Uniform & Portrait"
+  },
+  "help": {
+    "overview": "Left is the race being copied FROM and everything it carries; right is the race being changed and the bonuses it has now. Press copy and the target ends up with the source's values.",
+    "bonuses": "A bonus is a MULTIPLIER the engine applies to a skill: 1.15 means fifteen percent more, 1.0 means unchanged. This page changes one skill at a time on the race selected in Race overview.",
+    "parts": "Health is how much damage a part takes before it is crippled; hit weight is relative, so raising one part lowers every other part's share. Saving also pushes the new values onto the selected character, which heals that part -- the engine would otherwise keep healing it to the old maximum.",
+    "flags": "Every box reads as a permission: ticked means the race CAN do it. The engine stores some of these the other way round -- its field is called 'no hats' -- and the window flips them so a tick never has to be read backwards. Untick 'can wear hats' and that race stops equipping helmets.",
+    "character": "This page edits the character selected in the world, not their race. The sheet on the right lists every skill with its value -- click one to load it into the controls. Skills live in your save, so changes stay with that person.",
+    "uniform": "Live preview of uniform armour colours and character portrait. Adjust colours or open the portrait camera editor. Changes to colours are live and only saved when you click Save."
+  },
+  "button": {
+    "save": "Save",
+    "cancel": "Cancel",
+    "vanilla": "Vanilla"
+  },
+  "flag": {
+    "hats": "Can wear hats / helmets",
+    "shirts": "Can wear shirts / armour",
+    "shoes": "Can wear boots",
+    "indoors": "Can go indoors",
+    "swims": "Can swim",
+    "carry": "Can be carried",
+    "robot": "Is a robot",
+    "vampire": "Is vampiric",
+    "giant": "Is gigantic",
+    "gender": "Single gender"
+  },
+  "blood": {
+    "apply": "Set blood range"
+  },
+  "personality": {
+    "heading": "PERSONALITY",
+    "current": "Current: {value}",
+    "apply": "APPLY",
+    "noSelection": "Select a character first.",
+    "noState": "Selected character has no personality state.",
+    "noChoice": "Pick a personality first.",
+    "changed": "Personality changed. Kenshi will save it normally."
+  },
+  "appearance": {
+    "button": "Edit Appearance",
+    "editPortrait": "Edit portrait camera",
+    "noSelection": "Select a character before opening the editor.",
+    "notPlayer": "Appearance editor only supports player characters.",
+    "failed": "The appearance editor could not be opened."
+  }
+}

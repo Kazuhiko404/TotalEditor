@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="core">
+      <UniqueIdentifier>{6f982845-6625-4c01-bf50-517be6396f71}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="race">
+      <UniqueIdentifier>{458f2780-60b7-4d69-b369-e0926eb5782d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="character">
+      <UniqueIdentifier>{c549646b-2856-4c4f-bfa4-01f78df3ea44}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="uniform">
+      <UniqueIdentifier>{ad26daeb-6529-45e0-9118-2432a10be6fe}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="portrait">
+      <UniqueIdentifier>{57b0cb8f-7e99-470b-85d0-994119d67b22}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ui">
+      <UniqueIdentifier>{9e13d968-3fa0-4828-912f-9892c57849ab}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\TotalEditor.cpp" />
+    <ClCompile Include="src\core\config.cpp">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="src\core\log.cpp">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="src\core\json.cpp">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="src\core\messages.cpp">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="src\core\hotkey.cpp">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="src\core\frame_tick.cpp">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="src\race\anatomy.cpp">
+      <Filter>race</Filter>
+    </ClCompile>
+    <ClCompile Include="src\race\catalog.cpp">
+      <Filter>race</Filter>
+    </ClCompile>
+    <ClCompile Include="src\race\legacy_data.cpp">
+      <Filter>race</Filter>
+    </ClCompile>
+    <ClCompile Include="src\race\race_edit.cpp">
+      <Filter>race</Filter>
+    </ClCompile>
+    <ClCompile Include="src\race\store.cpp">
+      <Filter>race</Filter>
+    </ClCompile>
+    <ClCompile Include="src\character\appearance.cpp">
+      <Filter>character</Filter>
+    </ClCompile>
+    <ClCompile Include="src\character\character_identity.cpp">
+      <Filter>character</Filter>
+    </ClCompile>
+    <ClCompile Include="src\character\personality.cpp">
+      <Filter>character</Filter>
+    </ClCompile>
+    <ClCompile Include="src\uniform\colour_adjust_rules.cpp">
+      <Filter>uniform</Filter>
+    </ClCompile>
+    <ClCompile Include="src\uniform\uniform_colour.cpp">
+      <Filter>uniform</Filter>
+    </ClCompile>
+    <ClCompile Include="src\uniform\uniform_dresser.cpp">
+      <Filter>uniform</Filter>
+    </ClCompile>
+    <ClCompile Include="src\uniform\uniform_engine.cpp">
+      <Filter>uniform</Filter>
+    </ClCompile>
+    <ClCompile Include="src\uniform\uniform_schemes.cpp">
+      <Filter>uniform</Filter>
+    </ClCompile>
+    <ClCompile Include="src\uniform\uniform_store.cpp">
+      <Filter>uniform</Filter>
+    </ClCompile>
+    <ClCompile Include="src\portrait\portrait_editor.cpp">
+      <Filter>portrait</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ui\editor_window.cpp">
+      <Filter>ui</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ui\ui_widgets.cpp">
+      <Filter>ui</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\common.h" />
+    <ClInclude Include="src\core\config.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="src\core\log.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="src\core\json.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="src\core\messages.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="src\core\hotkey.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="src\core\frame_tick.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="src\race\anatomy.h">
+      <Filter>race</Filter>
+    </ClInclude>
+    <ClInclude Include="src\race\catalog.h">
+      <Filter>race</Filter>
+    </ClInclude>
+    <ClInclude Include="src\race\legacy_data.h">
+      <Filter>race</Filter>
+    </ClInclude>
+    <ClInclude Include="src\race\race_edit.h">
+      <Filter>race</Filter>
+    </ClInclude>
+    <ClInclude Include="src\race\store.h">
+      <Filter>race</Filter>
+    </ClInclude>
+    <ClInclude Include="src\character\appearance.h">
+      <Filter>character</Filter>
+    </ClInclude>
+    <ClInclude Include="src\character\character_identity.h">
+      <Filter>character</Filter>
+    </ClInclude>
+    <ClInclude Include="src\character\personality.h">
+      <Filter>character</Filter>
+    </ClInclude>
+    <ClInclude Include="src\uniform\colour_adjust_rules.h">
+      <Filter>uniform</Filter>
+    </ClInclude>
+    <ClInclude Include="src\uniform\uniform_colour.h">
+      <Filter>uniform</Filter>
+    </ClInclude>
+    <ClInclude Include="src\uniform\uniform_dresser.h">
+      <Filter>uniform</Filter>
+    </ClInclude>
+    <ClInclude Include="src\uniform\uniform_engine.h">
+      <Filter>uniform</Filter>
+    </ClInclude>
+    <ClInclude Include="src\uniform\uniform_schemes.h">
+      <Filter>uniform</Filter>
+    </ClInclude>
+    <ClInclude Include="src\uniform\uniform_store.h">
+      <Filter>uniform</Filter>
+    </ClInclude>
+    <ClInclude Include="src\portrait\portrait_editor.h">
+      <Filter>portrait</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ui\editor_window.h">
+      <Filter>ui</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ui\ui_palette.h">
+      <Filter>ui</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ui\ui_widgets.h">
+      <Filter>ui</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

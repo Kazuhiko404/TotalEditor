@@ -1,0 +1,30 @@
+{
+  "enabled": true,
+  "hotkey": {
+    "key": "K",
+    "needsCtrl": true
+  },
+  "bonus": {
+    "min": 0.0,
+    "max": 3.0,
+    "steps": 200
+  },
+  "stat": {
+    "min": 0.0,
+    "max": 200.0
+  },
+  "window": {
+    "width": 1280,
+    "height": 1020
+  },
+  "store": {
+    "saveOnClose": true,
+    "applyOnStart": true
+  },
+  "partHealth": {
+    "min": 1,
+    "max": 500
+  },
+  "followSelection": true,
+  "debugLog": false
+}
